@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { NavController, Platform, ToastController } from 'ionic-angular';
-
 import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 
 @Component({
@@ -11,7 +9,7 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 
 export class HomePage {
 
-  admobId: any;
+  admobId: 'ca-app-pub-3940256099942544/6300978111';
 
   constructor(
     private navController: NavController,
@@ -27,6 +25,7 @@ export class HomePage {
         position: 'top'
       });
       toast.present();
+	  var bannerConfig;	
       const bannerConfig: AdMobFreeBannerConfig = {
         // add your config here
         // for the sake of this example we will just use the test config
@@ -46,7 +45,7 @@ export class HomePage {
 
     showInterstitial() {
         this.adMobFree.interstitial.config({
-          id: 'ca-app-pub-xxx/xxx',
+          id: 'ca-app-pub-3940256099942544/1033173712',
           autoShow: true
         });
         this.adMobFree.interstitial.prepare();
